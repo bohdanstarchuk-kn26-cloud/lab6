@@ -27,13 +27,14 @@ int main(void) {
         printf("Fewer than two odd elements, C is a copy of A\n");
     }
 
-    printf("Array A: ");
+    /* Форматований вивід у рядок: ширина поля 8, два знаки після коми */
+    printf("Array A:\n");
     for (i = 0; i < N; i++) {
-        printf("%d ", a[i]);
+        printf("%8d", a[i]);
     }
-    printf("\nArray C: ");
+    printf("\nArray C:\n");
     for (i = 0; i < N; i++) {
-        printf("%.2f ", c[i]);
+        printf("%8.2f", c[i]);
     }
     printf("\n");
     return 0;

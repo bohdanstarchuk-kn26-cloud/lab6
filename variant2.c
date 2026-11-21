@@ -42,13 +42,18 @@ int main(void) {
         }
     }
 
-    printf("Array A: ");
-    for (i = 0; i < N; i++) {
-        printf("%.2f ", a[i]);
+    /* Вивід масивів за допомогою циклу while */
+    printf("Array A:");
+    i = 0;
+    while (i < N) {
+        printf("%8.2f", a[i]);
+        i++;
     }
-    printf("\nArray B: ");
-    for (i = 0; i < N; i++) {
-        printf("%.2f ", b[i]);
+    printf("\nArray B:");
+    i = 0;
+    while (i < N) {
+        printf("%8.2f", b[i]);
+        i++;
     }
     printf("\n");
     return 0;

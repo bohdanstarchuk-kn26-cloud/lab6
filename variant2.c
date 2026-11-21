@@ -3,7 +3,7 @@
 #define N 14
 
 int main(void) {
-    double a[N] = {5, -2, 3, -4, 7, -6, 8, 1, -9, 2, -3, 6, 4, -8};
+    double a[N] = {-1, -2, -3, -4, -5, -6, -7, -8, -9, -1, -2, -3, -4, -5};
     double b[N];
     double sum_neg = 0, sum_pos = 0, mean_neg = 0, mean_pos = 0;
     int cnt_neg = 0, cnt_pos = 0, i;

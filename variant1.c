@@ -3,7 +3,7 @@
 #define N 12
 
 int main(void) {
-    int a[N] = {4, 3, 8, 5, 10, 6, 7, 2, 9, 12, 14, 1};
+    int a[N] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 3};
     double c[N];
     int i, odd_count = 0, idx = -1;
 

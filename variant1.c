@@ -1,14 +1,26 @@
 #include <stdio.h>
 
-#define N 12
+#define MAX 100
 
 int main(void) {
-    int a[N] = {4, 3, 8, 5, 10, 6, 7, 2, 9, 12, 14, 1};
-    double c[N];
+    int a[MAX], n;
+    double c[MAX];
     int i, odd_count = 0, idx = -1;
 
+    /* Введення розміру та елементів масиву з клавіатури */
+    printf("Enter array size (1-%d): ", MAX);
+    scanf("%d", &n);
+    if (n < 1 || n > MAX) {
+        printf("Invalid array size\n");
+        return 1;
+    }
+    printf("Enter %d integers: ", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
     /* Копіюємо A в C і шукаємо індекс другого непарного елемента */
-    for (i = 0; i < N; i++) {
+    for (i = 0; i < n; i++) {
         c[i] = a[i];
         if (a[i] % 2 != 0) {
             odd_count++;
@@ -20,7 +32,7 @@ int main(void) {
 
     /* Якщо знайдено другий непарний, ділимо на нього всі наступні елементи */
     if (idx != -1) {
-        for (i = idx + 1; i < N; i++) {
+        for (i = idx + 1; i < n; i++) {
             c[i] = a[i] / (double)a[idx];
         }
     } else {
@@ -28,11 +40,11 @@ int main(void) {
     }
 
     printf("Array A: ");
-    for (i = 0; i < N; i++) {
+    for (i = 0; i < n; i++) {
         printf("%d ", a[i]);
     }
     printf("\nArray C: ");
-    for (i = 0; i < N; i++) {
+    for (i = 0; i < n; i++) {
         printf("%.2f ", c[i]);
     }
     printf("\n");
